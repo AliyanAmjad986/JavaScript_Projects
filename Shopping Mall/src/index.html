@@ -22,12 +22,43 @@
           <h3 class="text-[28px] font-bold text-purple-700">Online Shop</h3>
         </div>
 
+        <!-- searchbar -->
+        <div
+          class="flex flex-row border border-purple-600 w-[40%] h-[40px] rounded-lg"
+        >
+          <input
+            class="border-none w-[100%] h-[100%] rounded-lg p-2 font-bold focus:outline-none"
+            type="text"
+            id="searchbar_input"
+          />
+          <a href=""
+            ><img
+              class="w-[40px] h-[100%] border border-purple-600 rounded-r-md p-1"
+              src="image/searchicon.png"
+              alt="srachicon"
+          /></a>
+        </div>
+
+        <!-- Cart -->
+        <div
+          class="flex flex-row items-center gap-2 px-4 py-2 bg-white border-2 border-purple-300 rounded-xl shadow-sm hover:bg-purple-600 hover:text-white hover:border-purple-600 transition duration-300"
+          id="cart_btn"
+        >
+          <img
+            class="w-[30px] h-[30px]"
+            src="image/cart.png"
+            alt="Shopping Cart"
+          />
+
+          <h3 class="text-[18px] font-semibold">Cart</h3>
+        </div>
+
         <!-- Navigation Links -->
         <div>
           <ul class="flex flex-row items-center gap-3 text-[18px]">
             <li>
               <a
-                href="#"
+                href="index.html"
                 class="block px-4 py-2 rounded-lg text-purple-700 font-medium hover:bg-purple-600 hover:text-white transition duration-300"
               >
                 Home
@@ -53,27 +84,58 @@
             </li>
           </ul>
         </div>
-
-        <!-- Cart -->
-        <div
-          class="flex flex-row items-center gap-2 px-4 py-2 bg-white border-2 border-purple-300 rounded-xl shadow-sm hover:bg-purple-600 hover:text-white hover:border-purple-600 transition duration-300"
-        >
-          <img
-            class="w-[30px] h-[30px]"
-            src="image/cart.png"
-            alt="Shopping Cart"
-          />
-
-          <h3 class="text-[18px] font-semibold">Cart</h3>
-        </div>
+        <!-- Cart revenew -->
       </nav>
+      <div
+        class="w-[300px] min-h-[300px] bg-white border-2 border-purple-500 rounded-xl shadow-md p-4 absolute right-[19%] top-[8%]"
+        id="cart_box"
+      >
+        <!-- Cart heading -->
+        <h5
+          class="font-bold text-[25px] text-center text-purple-600 border-b-2 border-purple-200 pb-3"
+        >
+          Shopping Cart
+        </h5>
+
+        <!-- Empty cart area -->
+        <div class="flex flex-col items-center justify-center mt-8">
+          <div
+            class="bg-purple-100 w-[90px] h-[90px] rounded-full flex items-center justify-center"
+          >
+            <img
+              class="w-[55px]"
+              src="image/internal_cart.png"
+              alt="Shopping cart"
+            />
+          </div>
+
+          <p class="text-purple-600 font-semibold text-[20px] mt-4">
+            Your cart is empty!
+          </p>
+
+          <p class="text-gray-500 text-sm text-center mt-1">
+            Add some products to your cart
+          </p>
+
+          <!-- Button -->
+          <button
+            class="bg-purple-600 text-white px-5 py-2 rounded-lg mt-5 hover:bg-purple-700"
+          >
+            Start Shopping
+          </button>
+        </div>
+        <div class="border-t border-purple-200 mt-6 pt-3 flex justify-between">
+          <span class="font-semibold text-gray-600">Total:</span>
+          <span class="font-bold text-purple-600" id="total_price">0.00</span>
+        </div>
+      </div>
     </header>
 
     <main>
       <div class="parent-items p-10">
         <ul class="parent-items grid grid-cols-5 gap-2">
           <li>
-            <a href="#">
+            <a href="product.html">
               <div
                 class="card border border-black flex flex-col justify-center items-center text-center p-4"
               >
@@ -358,4 +420,5 @@
       </div>
     </main>
   </body>
+  <script src="index.js"></script>
 </html>
