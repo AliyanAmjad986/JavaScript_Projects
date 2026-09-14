@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <h1 class="text-[50px] text-white text-center font-bold bg-black">
+        Calculator 1.0
+      </h1>
+    </header>
+    <main
+      class="main_calculator bg-yellow-400 h-screen text-center items-center justify-center flex"
+    >
+      <!-- parent div -->
+      <div
+        class="parent_div border bg-gray-200 w-[25%] h-[50%] flex flex-col justify-center items-center border-black gap-y-3 py-[1%]"
+      >
+        <div>
+          <h1 class="font-bold text-[100%]">Basic Calculator</h1>
+        </div>
+        <!-- Display -->
+        <div class="input-box text-center h-[40px] w-[100%]">
+          <input
+            type="text"
+            readonly
+            class="input_bar w-[95%] h-[100%] border border-black bg-white text-right px-2 text-[25px]"
+          />
+        </div>
+
+        <!-- Buttons -->
+        <!-- Buttons -->
+        <div
+          class="parent_btn_container grid grid-cols-4 w-[98%] border border-gray-300 gap-1"
+        >
+          <!-- Row 1 -->
+          <div
+            class="btns bg-slate-300 w-[100%] text-center text-[30px] font-semibold"
+          >
+            <button
+              class="btn_ac border border-gray-300 hover:border-black transition-colors duration-200 w-[100%] h-[100%] rounded-[10%]"
+            >
+              AC
+            </button>
+          </div>
+
+          <div
+            class="btns bg-slate-300 w-[100%] text-center text-[30px] font-semibold"
+          >
+            <button
+              class="btn_square border border-gray-300 hover:border-black transition-colors duration-200 w-[100%] h-[100%] rounded-[10%]"
+            >
+              √x
+            </button>
+          </div>
+
+          <div
+            class="btns bg-slate-300 w-[100%] text-center text-[30px] font-semibold"
+          >
+            <button
+              class="btn_module border border-gray-300 hover:border-black transition-colors duration-200 w-[100%] h-[100%] rounded-[10%]"
+            >
+              %
+            </button>
+          </div>
+
+          <div
+            class="btns bg-slate-300 w-[100%] text-center text-[30px] font-semibold"
+          >
+            <button
+              class="btn_divide border border-gray-300 hover:border-black transition-colors duration-200 w-[100%] h-[100%] rounded-[10%] bg-yellow-400"
+            >
+              ÷
+            </button>
+          </div>
+
+          <!-- Row 2 -->
+          <div class="btns w-[100%] text-center text-[30px] font-semibold">
+            <button id="btn_7"
+              class="btn_7 border border-gray-300 hover:border-black transition-colors duration-200 w-[100%] h-[100%] rounded-[10%] bg-white"
+            >
+              7
+            </button>
+          </div>
+
+          <div class="btns w-[100%] text-center text-[30px] font-semibold">
+            <button
+              class="btn_8 border border-gray-300 hover:border-black transition-colors duration-200 w-[100%] h-[100%] rounded-[10%] bg-white"
+            >
+              8
+            </button>
+          </div>
+
+          <div class="btns w-[100%] text-center text-[30px] font-semibold">
+            <button
+              class="btn_9 border border-gray-300 hover:border-black transition-colors duration-200 w-[100%] h-[100%] rounded-[10%] bg-white"
+            >
+              9
+            </button>
+          </div>
+
+          <div
+            class="btns bg-slate-300 w-[100%] text-center text-[30px] font-semibold"
+          >
+            <button
+              class="btn_multiply border border-gray-300 hover:border-black transition-colors duration-200 w-[100%] h-[100%] rounded-[10%] bg-yellow-400"
+            >
+              ×
+            </button>
+          </div>
+
+          <!-- Row 3 -->
+          <div class="btns w-[100%] text-center text-[30px] font-semibold">
+            <button
+              class="btn_4 border border-gray-300 hover:border-black transition-colors duration-200 w-[100%] h-[100%] rounded-[10%] bg-white"
+            >
+              4
+            </button>
+          </div>
+
+          <div class="btns w-[100%] text-center text-[30px] font-semibold">
+            <button
+              class="btn_5 border border-gray-300 hover:border-black transition-colors duration-200 w-[100%] h-[100%] rounded-[10%] bg-white"
+            >
+              5
+            </button>
+          </div>
+
+          <div class="btns w-[100%] text-center text-[30px] font-semibold">
+            <button
+              class="btn_6 border border-gray-300 hover:border-black transition-colors duration-200 w-[100%] h-[100%] rounded-[10%] bg-white"
+            >
+              6
+            </button>
+          </div>
+
+          <div
+            class="btns bg-slate-300 w-[100%] text-center text-[30px] font-semibold"
+          >
+            <button
+              class="btn_minus border border-gray-300 hover:border-black transition-colors duration-200 w-[100%] h-[100%] rounded-[10%] bg-yellow-400"
+            >
+              -
+            </button>
+          </div>
+
+          <!-- Row 4 -->
+          <div class="btns w-[100%] text-center text-[30px] font-semibold">
+            <button
+              class="btn_1 border border-gray-300 hover:border-black transition-colors duration-200 w-[100%] h-[100%] rounded-[10%] bg-white"
+            >
+              1
+            </button>
+          </div>
+
+          <div class="btns w-[100%] text-center text-[30px] font-semibold">
+            <button
+              class="btn_2 border border-gray-300 hover:border-black transition-colors duration-200 w-[100%] h-[100%] rounded-[10%] bg-white"
+            >
+              2
+            </button>
+          </div>
+
+          <div class="btns w-[100%] text-center text-[30px] font-semibold">
+            <button
+              class="btn_3 border border-gray-300 hover:border-black transition-colors duration-200 w-[100%] h-[100%] rounded-[10%] bg-white"
+            >
+              3
+            </button>
+          </div>
+
+          <div
+            class="btns bg-slate-300 w-[100%] text-center text-[30px] font-semibold"
+          >
+            <button
+              class="btn_plus border border-gray-300 hover:border-black transition-colors duration-200 w-[100%] h-[100%] rounded-[10%] bg-yellow-400"
+            >
+              +
+            </button>
+          </div>
+
+          <!-- Row 5 -->
+          <div class="btns w-[100%] text-center text-[30px] font-semibold">
+            <button
+              class="btn_0 border border-gray-300 hover:border-black transition-colors duration-200 w-[100%] h-[100%] rounded-[10%] bg-white"
+            >
+              0
+            </button>
+          </div>
+
+          <div class="btns w-[100%] text-center text-[30px] font-semibold">
+            <button
+              class="btn_dot border border-gray-300 hover:border-black transition-colors duration-200 w-[100%] h-[100%] rounded-[10%] bg-white"
+            >
+              .
+            </button>
+          </div>
+
+          <div class="btns w-[100%] text-center text-[30px] font-semibold">
+            <button
+              class="btn_mix border border-gray-300 hover:border-black transition-colors duration-200 w-[100%] h-[100%] rounded-[10%] bg-white"
+            >
+              +/-
+            </button>
+          </div>
+
+          <div
+            class="btns bg-slate-300 w-[100%] text-center text-[30px] font-semibold"
+          >
+            <button
+              class="btn_equal border border-gray-300 hover:border-black transition-colors duration-200 w-[100%] h-[100%] bg-yellow-400 rounded-[10%]"
+            >
+              =
+            </button>
+          </div>
+        </div>
+
+        <div>
+          <p class="text-[70%] font-bold">Calculator by @aliyanamjad</p>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="action.js"></script>
+</html>
