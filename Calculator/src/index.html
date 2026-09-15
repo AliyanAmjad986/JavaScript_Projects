@@ -23,9 +23,10 @@
           <h1 class="font-bold text-[100%]">Basic Calculator</h1>
         </div>
         <!-- Display -->
-        <div class="input-box text-center h-[40px] w-[100%]">
+        <div class="input_box text-center h-[40px] w-[100%]">
           <input
             type="text"
+            id="input_bar"
             readonly
             class="input_bar w-[95%] h-[100%] border border-black bg-white text-right px-2 text-[25px]"
           />
@@ -41,6 +42,7 @@
             class="btns bg-slate-300 w-[100%] text-center text-[30px] font-semibold"
           >
             <button
+              id="btn_ac"
               class="btn_ac border border-gray-300 hover:border-black transition-colors duration-200 w-[100%] h-[100%] rounded-[10%]"
             >
               AC
@@ -79,7 +81,8 @@
 
           <!-- Row 2 -->
           <div class="btns w-[100%] text-center text-[30px] font-semibold">
-            <button id="btn_7"
+            <button
+              id="btn_7"
               class="btn_7 border border-gray-300 hover:border-black transition-colors duration-200 w-[100%] h-[100%] rounded-[10%] bg-white"
             >
               7
@@ -88,6 +91,7 @@
 
           <div class="btns w-[100%] text-center text-[30px] font-semibold">
             <button
+              id="btn_8"
               class="btn_8 border border-gray-300 hover:border-black transition-colors duration-200 w-[100%] h-[100%] rounded-[10%] bg-white"
             >
               8
@@ -96,6 +100,7 @@
 
           <div class="btns w-[100%] text-center text-[30px] font-semibold">
             <button
+              id="btn_9"
               class="btn_9 border border-gray-300 hover:border-black transition-colors duration-200 w-[100%] h-[100%] rounded-[10%] bg-white"
             >
               9
@@ -106,6 +111,7 @@
             class="btns bg-slate-300 w-[100%] text-center text-[30px] font-semibold"
           >
             <button
+              id="btn_multiply"
               class="btn_multiply border border-gray-300 hover:border-black transition-colors duration-200 w-[100%] h-[100%] rounded-[10%] bg-yellow-400"
             >
               ×
@@ -176,6 +182,7 @@
             class="btns bg-slate-300 w-[100%] text-center text-[30px] font-semibold"
           >
             <button
+            id="btn_plus"
               class="btn_plus border border-gray-300 hover:border-black transition-colors duration-200 w-[100%] h-[100%] rounded-[10%] bg-yellow-400"
             >
               +
@@ -211,6 +218,7 @@
             class="btns bg-slate-300 w-[100%] text-center text-[30px] font-semibold"
           >
             <button
+            id="btn_equal"
               class="btn_equal border border-gray-300 hover:border-black transition-colors duration-200 w-[100%] h-[100%] bg-yellow-400 rounded-[10%]"
             >
               =

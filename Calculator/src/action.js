@@ -18,6 +18,43 @@ let btn0 = document.getElementById("btn_0");
 let btndot = document.getElementById("btn_dot");
 let btnmix = document.getElementById("btn_mix");
 let btnequal = document.getElementById("btn_equal");
+let inputbox = document.getElementById("input_bar");
+let addvalues = [];
+let sum = 0;
+btn7.addEventListener("click", () => {
+  inputbox.value = inputbox.value + "7";
+});
+btnAC.addEventListener("click", () => {
+  inputbox.value = "";
+  addvalues.length = 0;
+  sum = 0;
+});
+btn8.addEventListener("click", () => {
+  inputbox.value = inputbox.value + "8";
+});
+function addval() {
+  addvalues.push(inputbox.value);
+  for (let i = 0; i < addvalues.length; i++) {
+    addvalues[i] = Number(inputbox.value);
+  }
+  inputbox.value = "";
+  for (let i = 0; i < addvalues.length; i++) {
+    sum = sum + addvalues[i];
+  }
 
-btn7.onclick 
+  // for(let j = 0; j < addvalues.length; j++ ){
+  //     console.log(addvalues[j]);
+  // }
+  console.log(addvalues.length);
+}
+btnplus.addEventListener("click", () => {
+  addval();
+});
+btnequal.addEventListener("click", () => {
+  addval();
+  inputbox.value = "";
+  inputbox.value = sum;
+  console.log(sum);
+});
+console.dir(inputbox);
 console.log("geo");
