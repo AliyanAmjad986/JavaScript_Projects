@@ -25,22 +25,36 @@ let sum = 0;
 let temp_operator;
 let arraypoint_index = 0;
 let ans = 0;
-
+let temp_value;
+let pervious_operator;
 function operation_performed() {
   for (let i = arraypoint_index; i < values.length; i++) {
-    if (temp_operator === "+") {
+    if (temp_operator === "+" || pervious_operator === "+") {
       ans = ans + values[i];
+      console.log("mera index" + i + "hai");
+      arraypoint_index++;
     }
-    if (temp_operator === "-") {
-      ans = ans - value[i];
+    if (temp_operator === "-" || pervious_operator === "-") {
+      if (ans > 0) {
+        ans = ans - values[i];
+      }
+      arraypoint_index++;
     }
   }
-  arraypoint_index++;
-  console.log(ans);
+
+  console.log("Array Index: " + arraypoint_index);
+  console.log("Answer" + ans);
   inputbox.value = ans;
+
+  //   ans = 0;
 }
 
 btn7.addEventListener("click", () => {
+    if (temp_operator === "+" || temp_operator === "-") {
+    
+    inputbox.value = "";
+  }
+  temp_operator = "";
   inputbox.value = inputbox.value + "7";
 });
 btnAC.addEventListener("click", () => {
@@ -56,60 +70,130 @@ btn9.addEventListener("click", () => {
   inputbox.value = inputbox.value + "9";
 });
 btn0.addEventListener("click", () => {
+    if (temp_operator === "+" || temp_operator === "-") {
+    
+    inputbox.value = "";
+  }
+  temp_operator = "";
   inputbox.value = inputbox.value + "0";
 });
 btndot.addEventListener("click", () => {
   inputbox.value = inputbox.value + ".";
 });
 btnmix.addEventListener("click", () => {
+    if (temp_operator === "+" || temp_operator === "-") {
+    
+    inputbox.value = "";
+  }
+  temp_operator = "";
   inputbox.value = inputbox.value + "8";
 });
 btn3.addEventListener("click", () => {
+    if (temp_operator === "+" || temp_operator === "-") {
+    
+    inputbox.value = "";
+  }
+  temp_operator = "";
   inputbox.value = inputbox.value + "3";
 });
 btn2.addEventListener("click", () => {
   if (temp_operator === "+" || temp_operator === "-") {
+    
     inputbox.value = "";
   }
+  temp_operator = "";
   inputbox.value = inputbox.value + "2";
 });
 btn1.addEventListener("click", () => {
   if (temp_operator === "+" || temp_operator === "-") {
     inputbox.value = "";
   }
+  temp_operator = "";
   inputbox.value = inputbox.value + "1";
 });
 btn6.addEventListener("click", () => {
+    if (temp_operator === "+" || temp_operator === "-") {
+    
+    inputbox.value = "";
+  }
+  temp_operator = "";
   inputbox.value = inputbox.value + "6";
 });
 btn4.addEventListener("click", () => {
+    if (temp_operator === "+" || temp_operator === "-") {
+    
+    inputbox.value = "";
+  }
+  temp_operator = "";
   inputbox.value = inputbox.value + "4";
 });
 btn5.addEventListener("click", () => {
+    if (temp_operator === "+" || temp_operator === "-") {
+    
+    inputbox.value = "";
+  }
+  temp_operator = "";
   inputbox.value = inputbox.value + "5";
 });
 btnmodule.addEventListener("click", () => {
+    if (temp_operator === "+" || temp_operator === "-") {
+    
+    inputbox.value = "";
+  }
+  temp_operator = "";
   inputbox.value = inputbox.value + "8";
 });
 
 btndivide.addEventListener("click", () => {});
 btnsquare.addEventListener("click", () => {
+    if (temp_operator === "+" || temp_operator === "-") {
+    
+    inputbox.value = "";
+  }
+  temp_operator = "";
   inputbox.value = inputbox.value + "8";
 });
 
 function display() {
   for (let i = 0; i < values.length; i++) {
-    console.log(values[i]);
+    console.log("ye values hein " + values[i]);
   }
 }
 // forplus button
 btnplus.addEventListener("click", () => {
-  values.push(Number(inputbox.value));
+  if (temp_operator !== "-" && temp_operator !== "+") {
+    values.push(Number(inputbox.value));
+  }
+  if (pervious_operator == "-") {
+    operation_performed();
+  }
   //   operators.push("+");
   display();
   temp_operator = "+";
-  operation_performed();
+  pervious_operator = "+";
+
+  if (values.length > 1) {
+    operation_performed();
+    console.log("mein chl gaya");
+  }
 });
 
 //minusbutton
-btnminus.addEventListener("click", () => {});
+btnminus.addEventListener("click", () => {
+  if (temp_operator !== "-" && temp_operator !== "+") {
+    values.push(Number(inputbox.value));
+  }
+
+  if (pervious_operator == "+") {
+    operation_performed();
+  }
+
+  //   operators.push("+");
+  display();
+  temp_operator = "-";
+  pervious_operator = "-";
+  if (values.length > 1) {
+    operation_performed();
+    console.log("chloo");
+  }
+});
