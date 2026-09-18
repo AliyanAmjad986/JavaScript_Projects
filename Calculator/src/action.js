@@ -40,6 +40,21 @@ function operation_performed() {
       }
       arraypoint_index++;
     }
+
+    if (temp_operator === "*" || pervious_operator === "*") {
+        
+      if (ans > 0) {
+        
+        ans = ans * values[i];
+        arraypoint_index++;
+      }
+    }
+     if (temp_operator === "/" || pervious_operator === "/") {
+      if (ans > 0) {
+        ans = ans / values[i];
+      }
+      arraypoint_index++;
+    }
   }
 
   console.log("Array Index: " + arraypoint_index);
@@ -50,8 +65,7 @@ function operation_performed() {
 }
 
 btn7.addEventListener("click", () => {
-    if (temp_operator === "+" || temp_operator === "-") {
-    
+  if (temp_operator === "+" || temp_operator === "-") {
     inputbox.value = "";
   }
   temp_operator = "";
@@ -70,8 +84,7 @@ btn9.addEventListener("click", () => {
   inputbox.value = inputbox.value + "9";
 });
 btn0.addEventListener("click", () => {
-    if (temp_operator === "+" || temp_operator === "-") {
-    
+  if (temp_operator === "+" || temp_operator === "-") {
     inputbox.value = "";
   }
   temp_operator = "";
@@ -81,63 +94,56 @@ btndot.addEventListener("click", () => {
   inputbox.value = inputbox.value + ".";
 });
 btnmix.addEventListener("click", () => {
-    if (temp_operator === "+" || temp_operator === "-") {
-    
+  if (temp_operator === "+" || temp_operator === "-") {
     inputbox.value = "";
   }
   temp_operator = "";
   inputbox.value = inputbox.value + "8";
 });
 btn3.addEventListener("click", () => {
-    if (temp_operator === "+" || temp_operator === "-") {
-    
+  if (temp_operator === "+" || temp_operator === "-") {
     inputbox.value = "";
   }
   temp_operator = "";
   inputbox.value = inputbox.value + "3";
 });
 btn2.addEventListener("click", () => {
-  if (temp_operator === "+" || temp_operator === "-") {
-    
+  if (temp_operator === "+" || temp_operator === "-" || temp_operator === "*" || temp_operator === "/") {
     inputbox.value = "";
   }
   temp_operator = "";
   inputbox.value = inputbox.value + "2";
 });
 btn1.addEventListener("click", () => {
-  if (temp_operator === "+" || temp_operator === "-") {
+  if (temp_operator === "+" || temp_operator === "-" || temp_operator === "*" || temp_operator === "/") {
     inputbox.value = "";
   }
   temp_operator = "";
   inputbox.value = inputbox.value + "1";
 });
 btn6.addEventListener("click", () => {
-    if (temp_operator === "+" || temp_operator === "-") {
-    
+  if (temp_operator === "+" || temp_operator === "-" || temp_operator === "*" || temp_operator === "/") {
     inputbox.value = "";
   }
   temp_operator = "";
   inputbox.value = inputbox.value + "6";
 });
 btn4.addEventListener("click", () => {
-    if (temp_operator === "+" || temp_operator === "-") {
-    
+  if (temp_operator === "+" || temp_operator === "-") {
     inputbox.value = "";
   }
   temp_operator = "";
   inputbox.value = inputbox.value + "4";
 });
 btn5.addEventListener("click", () => {
-    if (temp_operator === "+" || temp_operator === "-") {
-    
+  if (temp_operator === "+" || temp_operator === "-") {
     inputbox.value = "";
   }
   temp_operator = "";
   inputbox.value = inputbox.value + "5";
 });
 btnmodule.addEventListener("click", () => {
-    if (temp_operator === "+" || temp_operator === "-") {
-    
+  if (temp_operator === "+" || temp_operator === "-") {
     inputbox.value = "";
   }
   temp_operator = "";
@@ -146,8 +152,7 @@ btnmodule.addEventListener("click", () => {
 
 btndivide.addEventListener("click", () => {});
 btnsquare.addEventListener("click", () => {
-    if (temp_operator === "+" || temp_operator === "-") {
-    
+  if (temp_operator === "+" || temp_operator === "-") {
     inputbox.value = "";
   }
   temp_operator = "";
@@ -161,10 +166,10 @@ function display() {
 }
 // forplus button
 btnplus.addEventListener("click", () => {
-  if (temp_operator !== "-" && temp_operator !== "+") {
+  if (temp_operator !== "-" && temp_operator !== "+" && temp_operator !== "*" && temp_operator!== "/") {
     values.push(Number(inputbox.value));
   }
-  if (pervious_operator == "-") {
+  if (pervious_operator == "-" || pervious_operator === "*" || pervious_operator ==="/") {
     operation_performed();
   }
   //   operators.push("+");
@@ -180,11 +185,11 @@ btnplus.addEventListener("click", () => {
 
 //minusbutton
 btnminus.addEventListener("click", () => {
-  if (temp_operator !== "-" && temp_operator !== "+") {
+  if (temp_operator !== "-" && temp_operator !== "+" && temp_operator !== "*" && temp_operator == "/") {
     values.push(Number(inputbox.value));
   }
 
-  if (pervious_operator == "+") {
+  if (pervious_operator == "+" || pervious_operator === "*" || pervious_operator ==="/") {
     operation_performed();
   }
 
@@ -195,5 +200,47 @@ btnminus.addEventListener("click", () => {
   if (values.length > 1) {
     operation_performed();
     console.log("chloo");
+  }
+});
+btnmultiply.addEventListener("click", () => {
+  if (
+    (temp_operator !== "-" && temp_operator !== "+") ||
+    temp_operator !== "*" && temp_operator !== "/"
+  ) {
+    values.push(Number(inputbox.value));
+  }
+  if (pervious_operator === "+" || pervious_operator === "-" || pervious_operator ==="/") {
+    operation_performed();
+  }
+  display();
+  temp_operator = "*";
+  pervious_operator = "*";
+if(values.length === 1){
+            ans = 1;
+        }
+  if (values.length > 1) {
+    
+    operation_performed();
+  }
+});
+btndivide.addEventListener("click", ()=>{
+ if (
+    (temp_operator !== "-" && temp_operator !== "+") ||
+    temp_operator !== "*" || temp_operator !== "/"
+  ) {
+    values.push(Number(inputbox.value));
+  }
+  if (pervious_operator === "+" || pervious_operator === "-" || pervious_operator ==="*") {
+    operation_performed();
+  }
+  display();
+  temp_operator = "/";
+  pervious_operator = "/";
+if(values.length === 1){
+            ans = 1;// problem here
+        }
+  if (values.length > 1) {
+    
+    operation_performed();
   }
 });
