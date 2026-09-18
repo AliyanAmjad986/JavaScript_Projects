@@ -1,6 +1,6 @@
 let btnAC = document.getElementById("btn_ac");
 let btnsquare = document.getElementById("btn_square");
-let btnmodule = document.getElementById("btn_module");
+let btnpercentage = document.getElementById("btn_module");
 let btndivide = document.getElementById("btn_divide");
 let btn7 = document.getElementById("btn_7");
 let btn8 = document.getElementById("btn_8");
@@ -42,21 +42,36 @@ function operation_performed() {
     }
 
     if (temp_operator === "*" || pervious_operator === "*") {
-        
       if (ans > 0) {
-        
         ans = ans * values[i];
         arraypoint_index++;
       }
     }
-     if (temp_operator === "/" || pervious_operator === "/") {
+    if (temp_operator === "/" || pervious_operator === "/") {
       if (ans > 0) {
         ans = ans / values[i];
+      }
+      if (values.length === 1) {
+        ans = values[i];
       }
       arraypoint_index++;
     }
   }
 
+  if (temp_operator === "%" || pervious_operator === "%") {
+    if (ans > 0) {
+      ans = ans / 100;
+    }
+
+    arraypoint_index++;
+  }
+  if (temp_operator === "^" || pervious_operator === "^") {
+    if (ans > 0) {
+      ans = Math.sqrt(ans);
+    }
+
+    arraypoint_index++;
+  }
   console.log("Array Index: " + arraypoint_index);
   console.log("Answer" + ans);
   inputbox.value = ans;
@@ -65,7 +80,13 @@ function operation_performed() {
 }
 
 btn7.addEventListener("click", () => {
-  if (temp_operator === "+" || temp_operator === "-") {
+  if (
+    temp_operator === "+" ||
+    temp_operator === "-" ||
+    temp_operator === "*" ||
+    temp_operator === "/" ||
+    temp_operator === "="
+  ) {
     inputbox.value = "";
   }
   temp_operator = "";
@@ -76,15 +97,43 @@ btnAC.addEventListener("click", () => {
   values.length = 0;
   ans = 0;
   arraypoint_index = 0;
+  pervious_operator = "";
+  temp_operator = "";
 });
 btn8.addEventListener("click", () => {
+  if (
+    temp_operator === "+" ||
+    temp_operator === "-" ||
+    temp_operator === "*" ||
+    temp_operator === "/" ||
+    temp_operator === "="
+  ) {
+    inputbox.value = "";
+  }
+  temp_operator = "";
   inputbox.value = inputbox.value + "8";
 });
 btn9.addEventListener("click", () => {
+  if (
+    temp_operator === "+" ||
+    temp_operator === "-" ||
+    temp_operator === "*" ||
+    temp_operator === "/" ||
+    temp_operator === "="
+  ) {
+    inputbox.value = "";
+  }
+  temp_operator = "";
   inputbox.value = inputbox.value + "9";
 });
 btn0.addEventListener("click", () => {
-  if (temp_operator === "+" || temp_operator === "-") {
+  if (
+    temp_operator === "+" ||
+    temp_operator === "-" ||
+    temp_operator === "*" ||
+    temp_operator === "/" ||
+    temp_operator === "="
+  ) {
     inputbox.value = "";
   }
   temp_operator = "";
@@ -94,69 +143,126 @@ btndot.addEventListener("click", () => {
   inputbox.value = inputbox.value + ".";
 });
 btnmix.addEventListener("click", () => {
-  if (temp_operator === "+" || temp_operator === "-") {
-    inputbox.value = "";
+  let positive = Number(inputbox.value);
+  console.log("mein hun positive: " + positive);
+  let negative;
+  if (positive === Number(inputbox.value)) {
+    console.log("True hun");
+    negative = -positive;
+    console.log("Negative:" + negative);
+    inputbox.value = negative;
+  } else {
+    inputbox.value = positive;
   }
-  temp_operator = "";
-  inputbox.value = inputbox.value + "8";
 });
 btn3.addEventListener("click", () => {
-  if (temp_operator === "+" || temp_operator === "-") {
+  if (
+    temp_operator === "+" ||
+    temp_operator === "-" ||
+    temp_operator === "*" ||
+    temp_operator === "/" ||
+    temp_operator === "="
+  ) {
     inputbox.value = "";
   }
   temp_operator = "";
   inputbox.value = inputbox.value + "3";
 });
 btn2.addEventListener("click", () => {
-  if (temp_operator === "+" || temp_operator === "-" || temp_operator === "*" || temp_operator === "/") {
+  if (
+    temp_operator === "+" ||
+    temp_operator === "-" ||
+    temp_operator === "*" ||
+    temp_operator === "/" ||
+    temp_operator === "="
+  ) {
     inputbox.value = "";
   }
   temp_operator = "";
   inputbox.value = inputbox.value + "2";
 });
 btn1.addEventListener("click", () => {
-  if (temp_operator === "+" || temp_operator === "-" || temp_operator === "*" || temp_operator === "/") {
+  if (
+    temp_operator === "+" ||
+    temp_operator === "-" ||
+    temp_operator === "*" ||
+    temp_operator === "/" ||
+    temp_operator === "="
+  ) {
     inputbox.value = "";
   }
   temp_operator = "";
   inputbox.value = inputbox.value + "1";
 });
 btn6.addEventListener("click", () => {
-  if (temp_operator === "+" || temp_operator === "-" || temp_operator === "*" || temp_operator === "/") {
+  if (
+    temp_operator === "+" ||
+    temp_operator === "-" ||
+    temp_operator === "*" ||
+    temp_operator === "/" ||
+    temp_operator === "="
+  ) {
     inputbox.value = "";
   }
   temp_operator = "";
   inputbox.value = inputbox.value + "6";
 });
 btn4.addEventListener("click", () => {
-  if (temp_operator === "+" || temp_operator === "-") {
+  if (
+    temp_operator === "+" ||
+    temp_operator === "-" ||
+    temp_operator === "*" ||
+    temp_operator === "/" ||
+    temp_operator === "="
+  ) {
     inputbox.value = "";
   }
   temp_operator = "";
   inputbox.value = inputbox.value + "4";
 });
 btn5.addEventListener("click", () => {
-  if (temp_operator === "+" || temp_operator === "-") {
+  if (
+    temp_operator === "+" ||
+    temp_operator === "-" ||
+    temp_operator === "*" ||
+    temp_operator === "/" ||
+    temp_operator === "="
+  ) {
     inputbox.value = "";
   }
   temp_operator = "";
   inputbox.value = inputbox.value + "5";
 });
-btnmodule.addEventListener("click", () => {
-  if (temp_operator === "+" || temp_operator === "-") {
-    inputbox.value = "";
+btnpercentage.addEventListener("click", () => {
+  if (
+    pervious_operator == "-" ||
+    pervious_operator === "*" ||
+    pervious_operator === "/" ||
+    pervious_operator === "+"
+  ) {
+    operation_performed();
   }
-  temp_operator = "";
-  inputbox.value = inputbox.value + "8";
+
+  temp_operator = "%";
+  pervious_operator = "%";
+  ans = Number(inputbox.value);
+  operation_performed();
 });
 
 btndivide.addEventListener("click", () => {});
 btnsquare.addEventListener("click", () => {
-  if (temp_operator === "+" || temp_operator === "-") {
-    inputbox.value = "";
+  if (
+    pervious_operator == "-" ||
+    pervious_operator === "*" ||
+    pervious_operator === "/" ||
+    pervious_operator === "+"
+  ) {
+    operation_performed();
   }
-  temp_operator = "";
-  inputbox.value = inputbox.value + "8";
+  temp_operator = "^";
+  pervious_operator = "^";
+  ans = Number(inputbox.value);
+  operation_performed();
 });
 
 function display() {
@@ -166,10 +272,20 @@ function display() {
 }
 // forplus button
 btnplus.addEventListener("click", () => {
-  if (temp_operator !== "-" && temp_operator !== "+" && temp_operator !== "*" && temp_operator!== "/") {
+  if (
+    temp_operator !== "-" &&
+    temp_operator !== "+" &&
+    temp_operator !== "*" &&
+    temp_operator !== "/" &&
+    temp_operator !== "="
+  ) {
     values.push(Number(inputbox.value));
   }
-  if (pervious_operator == "-" || pervious_operator === "*" || pervious_operator ==="/") {
+  if (
+    pervious_operator == "-" ||
+    pervious_operator === "*" ||
+    pervious_operator === "/"
+  ) {
     operation_performed();
   }
   //   operators.push("+");
@@ -185,11 +301,21 @@ btnplus.addEventListener("click", () => {
 
 //minusbutton
 btnminus.addEventListener("click", () => {
-  if (temp_operator !== "-" && temp_operator !== "+" && temp_operator !== "*" && temp_operator == "/") {
+  if (
+    temp_operator !== "-" &&
+    temp_operator !== "+" &&
+    temp_operator !== "*" &&
+    temp_operator !== "/" &&
+    temp_operator !== "="
+  ) {
     values.push(Number(inputbox.value));
   }
 
-  if (pervious_operator == "+" || pervious_operator === "*" || pervious_operator ==="/") {
+  if (
+    pervious_operator == "+" ||
+    pervious_operator === "*" ||
+    pervious_operator === "/"
+  ) {
     operation_performed();
   }
 
@@ -204,43 +330,69 @@ btnminus.addEventListener("click", () => {
 });
 btnmultiply.addEventListener("click", () => {
   if (
-    (temp_operator !== "-" && temp_operator !== "+") ||
-    temp_operator !== "*" && temp_operator !== "/"
+    temp_operator !== "-" &&
+    temp_operator !== "+" &&
+    temp_operator !== "*" &&
+    temp_operator !== "/" &&
+    temp_operator !== "="
   ) {
     values.push(Number(inputbox.value));
   }
-  if (pervious_operator === "+" || pervious_operator === "-" || pervious_operator ==="/") {
+  if (
+    pervious_operator === "+" ||
+    pervious_operator === "-" ||
+    pervious_operator === "/"
+  ) {
     operation_performed();
   }
   display();
   temp_operator = "*";
   pervious_operator = "*";
-if(values.length === 1){
-            ans = 1;
-        }
+  if (values.length === 1) {
+    ans = 1;
+  }
   if (values.length > 1) {
-    
     operation_performed();
   }
 });
-btndivide.addEventListener("click", ()=>{
- if (
-    (temp_operator !== "-" && temp_operator !== "+") ||
-    temp_operator !== "*" || temp_operator !== "/"
+btndivide.addEventListener("click", () => {
+  if (
+    temp_operator !== "-" &&
+    temp_operator !== "+" &&
+    temp_operator !== "*" &&
+    temp_operator !== "/" &&
+    temp_operator !== "="
   ) {
     values.push(Number(inputbox.value));
   }
-  if (pervious_operator === "+" || pervious_operator === "-" || pervious_operator ==="*") {
+  if (
+    pervious_operator === "+" ||
+    pervious_operator === "-" ||
+    pervious_operator === "*"
+  ) {
     operation_performed();
   }
   display();
   temp_operator = "/";
   pervious_operator = "/";
-if(values.length === 1){
-            ans = 1;// problem here
-        }
-  if (values.length > 1) {
-    
+  // if(values.length === 1){
+  //              ans = 1;// problem here
+  //         }
+  if (values.length >= 1) {
     operation_performed();
   }
+});
+btnequal.addEventListener("click", () => {
+  if (
+    temp_operator !== "-" &&
+    temp_operator !== "+" &&
+    temp_operator !== "*" &&
+    temp_operator !== "/"
+  ) {
+    values.push(Number(inputbox.value));
+  }
+  console.log("geooooooooooooooo");
+  operation_performed();
+  temp_operator = "=";
+  pervious_operator = "=";
 });
