@@ -8,24 +8,79 @@
   </head>
   <body>
     <header class="">
-      <nav class="flex flex-row justify-between items-center">
+      <nav
+        class="flex flex-row justify-between items-center border border-black bg-[#F3F0FA]"
+      >
         <div class="flex flex-row items-center w-fit">
           <img class="w-[60px]" src="image/my_logo.png" alt="" />
           <h3 class="logo font-extrabold text-[30px]">Online Shop</h3>
         </div>
         <div class="links">
           <ul class="flex flex-row text-[20px] gap-3">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Login</a></li>
-            <li><a href="#">Signup</a></li>
+            <li
+              class="seprate-link border-2 border-red-300 rounded-lg p-2 hover:border-green-600 hover:bg-purple-200 hover:transition hover:duration-500 hover:-translate-y-0.5"
+            >
+              <a href="#">Home</a>
+            </li>
+            <li
+              class="seprate-link border-2 border-red-300 rounded-lg p-2 hover:border-green-600 hover:bg-purple-100 hover:transition hover:duration-500 hover:-translate-y-0.5"
+            >
+              <a href="#">Login</a>
+            </li>
+            <li
+              class="seprate-link border-2 border-red-300 rounded-lg p-2 hover:border-green-600 hover:bg-purple-200 hover:transition hover:duration-500 hover:-translate-y-0.5"
+            >
+              <a href="#">Signup</a>
+            </li>
           </ul>
         </div>
-        <div class="flex flex-row items-center">
+        <div
+          class="flex flex-row items-center border border-black rounded-lg p-1"
+        >
           <img src="image/cart.png" alt="" />
           <h3 class="text-[20px]">Cart</h3>
         </div>
       </nav>
     </header>
-    <div></div>
+
+    <main>
+      <div class="parent-items">
+        <div class="card border border-black">
+          <img
+            class="w-[20%] border border-black"
+            src="image/item1.png"
+            alt=""
+          />
+          <p class="font-bold text-[18px]">Digestive Half Roll</p>
+          <div class="price_box flex flex-col gap-x-2">
+            <div class="flex flex-row gap-x-1">
+              <p class="font-semibold text-[16px]">WholeSale Rs.</p>
+              <p class="wholesale_price font-semibold text-[16px]">220</p>
+            </div>
+
+            <div class="flex flex-row gap-x-1">
+              <p class="font-semibold text-[16px]">SalePrice Rs.</p>
+              <p class="sale_price font-semibold text-[16px]">240</p>
+            </div>
+          </div>
+          <div class="flex flex-row gap-x-1">
+            <p class="font-medium">Availability:</p>
+            <p class="stock font-bold">In Stock</p>
+          </div>
+          <div class="quanity_box flex flex-row gap-x-1 items-center">
+            <p class="font-semibold text-[16px]">Quantity:</p>
+            <input class="border border-black h-fit w-[5%]" type="number" />
+            <div>
+                 <button
+              class="cartbtn border border-black bg-yellow-300 text-[18px] font-bold"
+            >
+              Add to Cart
+            </button>
+            </div>
+           
+          </div>
+        </div>
+      </div>
+    </main>
   </body>
 </html>
