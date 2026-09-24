@@ -44,42 +44,291 @@
     </header>
 
     <main>
-      <div class="parent-items">
-        <div class="card border border-black">
-          <img
-            class="w-[20%] border border-black"
-            src="image/item1.png"
-            alt=""
-          />
-          <p class="font-bold text-[18px]">Digestive Half Roll</p>
-          <div class="price_box flex flex-col gap-x-2">
-            <div class="flex flex-row gap-x-1">
-              <p class="font-semibold text-[16px]">WholeSale Rs.</p>
-              <p class="wholesale_price font-semibold text-[16px]">220</p>
-            </div>
+      <div class="parent-items p-10">
+        <ul class="parent-items grid grid-cols-5 gap-2">
+          <li>
+            <a href="#">
+              <div
+                class="card border border-black flex flex-col justify-center items-center text-center p-4"
+              >
+                <img
+                  class="w-[100%] h-[100%]  hover:scale-y-125 transition-transform duration-200"
+                  src="image/item1.png"
+                  alt=""
+                />
+                <div class="py-2">
+                  <p class="font-bold text-[18px] w-fit" id="name">
+                    Digestive Half Roll
+                  </p>
+                  <div class="price_box flex flex-col gap-x-2 w-fit">
+                    <div class="flex flex-row gap-x-1 w-fit">
+                      <p class="font-semibold text-[16px]">WholeSale Rs.</p>
+                      <p
+                        class="wholesale_price font-semibold text-[16px]"
+                        id="wholesale_price_from"
+                      >
+                        205
+                      </p>
+                      <p>-</p>
+                      <p
+                        class="font-semibold text-[16px]"
+                        id="wholesale_price_that"
+                      >
+                        225
+                      </p>
+                    </div>
 
-            <div class="flex flex-row gap-x-1">
-              <p class="font-semibold text-[16px]">SalePrice Rs.</p>
-              <p class="sale_price font-semibold text-[16px]">240</p>
-            </div>
-          </div>
-          <div class="flex flex-row gap-x-1">
-            <p class="font-medium">Availability:</p>
-            <p class="stock font-bold">In Stock</p>
-          </div>
-          <div class="quanity_box flex flex-row gap-x-1 items-center">
-            <p class="font-semibold text-[16px]">Quantity:</p>
-            <input class="border border-black h-fit w-[5%]" type="number" />
-            <div>
-                 <button
-              class="cartbtn border border-black bg-yellow-300 text-[18px] font-bold"
-            >
-              Add to Cart
-            </button>
-            </div>
-           
-          </div>
-        </div>
+                    <div class="flex flex-row gap-x-1">
+                      <p class="font-semibold text-[16px]">SalePrice Rs.</p>
+                      <p
+                        class="sale_price font-semibold text-[16px]"
+                        id="sale_price"
+                      >
+                        240
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex flex-row gap-x-1">
+                    <p class="font-medium">Availability:</p>
+                    <p class="stock font-bold">In Stock</p>
+                  </div>
+                  <div class="flex flex-row gap-x-1">
+                    <p class="font-semibold text-[16px]">Min Qty:</p>
+                    <p class="text-[16px] font-bold" id="min_quantity">2</p>
+                    <p class="font-semibold text-[16px]">Crtn</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
+          <!-- endofcardone -->
+
+          <!-- card2 -->
+          <li>
+            <a href="#">
+              <div
+                class="card border border-black flex flex-col justify-center items-center text-center p-4"
+              >
+                <img
+                  class="w-[100%] h-[100%] hover:scale-y-125 transition-transform duration-200"
+                  src="image/item1.png"
+                  alt=""
+                />
+                <div class="py-2">
+                  <p class="font-bold text-[18px] w-fit" id="name">
+                    Digestive Half Roll
+                  </p>
+                  <div class="price_box flex flex-col gap-x-2 w-fit">
+                    <div class="flex flex-row gap-x-1 w-fit">
+                      <p class="font-semibold text-[16px]">WholeSale Rs.</p>
+                      <p
+                        class="wholesale_price font-semibold text-[16px]"
+                        id="wholesale_price_from"
+                      >
+                        205
+                      </p>
+                      <p>-</p>
+                      <p
+                        class="font-semibold text-[16px]"
+                        id="wholesale_price_that"
+                      >
+                        225
+                      </p>
+                    </div>
+
+                    <div class="flex flex-row gap-x-1">
+                      <p class="font-semibold text-[16px]">SalePrice Rs.</p>
+                      <p
+                        class="sale_price font-semibold text-[16px]"
+                        id="sale_price"
+                      >
+                        240
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex flex-row gap-x-1">
+                    <p class="font-medium">Availability:</p>
+                    <p class="stock font-bold">In Stock</p>
+                  </div>
+                  <div class="flex flex-row gap-x-1">
+                    <p class="font-semibold text-[16px]">Min Qty:</p>
+                    <p class="text-[16px] font-bold" id="min_quantity">2</p>
+                    <p class="font-semibold text-[16px]">Crtn</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <div
+                class="card border border-black flex flex-col justify-center items-center text-center p-4"
+              >
+                <img
+                  class="w-[100%] h-[100%]  hover:scale-y-125 transition-transform duration-200"
+                  src="image/item1.png"
+                  alt=""
+                />
+                <div class="py-2">
+                  <p class="font-bold text-[18px] w-fit" id="name">
+                    Digestive Half Roll
+                  </p>
+                  <div class="price_box flex flex-col gap-x-2 w-fit">
+                    <div class="flex flex-row gap-x-1 w-fit">
+                      <p class="font-semibold text-[16px]">WholeSale Rs.</p>
+                      <p
+                        class="wholesale_price font-semibold text-[16px]"
+                        id="wholesale_price_from"
+                      >
+                        205
+                      </p>
+                      <p>-</p>
+                      <p
+                        class="font-semibold text-[16px]"
+                        id="wholesale_price_that"
+                      >
+                        225
+                      </p>
+                    </div>
+
+                    <div class="flex flex-row gap-x-1">
+                      <p class="font-semibold text-[16px]">SalePrice Rs.</p>
+                      <p
+                        class="sale_price font-semibold text-[16px]"
+                        id="sale_price"
+                      >
+                        240
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex flex-row gap-x-1">
+                    <p class="font-medium">Availability:</p>
+                    <p class="stock font-bold">In Stock</p>
+                  </div>
+                  <div class="flex flex-row gap-x-1">
+                    <p class="font-semibold text-[16px]">Min Qty:</p>
+                    <p class="text-[16px] font-bold" id="min_quantity">2</p>
+                    <p class="font-semibold text-[16px]">Crtn</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
+          <!-- wndoscard -->
+          <li>
+            <a href="#">
+              <div
+                class="card border border-black flex flex-col justify-center items-center text-center p-4"
+              >
+                <img
+                  class="w-[100%] h-[100%] hover:scale-y-125 transition-transform duration-200"
+                  src="image/item1.png"
+                  alt=""
+                />
+                <div class="py-2">
+                  <p class="font-bold text-[18px] w-fit" id="name">
+                    Digestive Half Roll
+                  </p>
+                  <div class="price_box flex flex-col gap-x-2 w-fit">
+                    <div class="flex flex-row gap-x-1 w-fit">
+                      <p class="font-semibold text-[16px]">WholeSale Rs.</p>
+                      <p
+                        class="wholesale_price font-semibold text-[16px]"
+                        id="wholesale_price_from"
+                      >
+                        205
+                      </p>
+                      <p>-</p>
+                      <p
+                        class="font-semibold text-[16px]"
+                        id="wholesale_price_that"
+                      >
+                        225
+                      </p>
+                    </div>
+
+                    <div class="flex flex-row gap-x-1">
+                      <p class="font-semibold text-[16px]">SalePrice Rs.</p>
+                      <p
+                        class="sale_price font-semibold text-[16px]"
+                        id="sale_price"
+                      >
+                        240
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex flex-row gap-x-1">
+                    <p class="font-medium">Availability:</p>
+                    <p class="stock font-bold">In Stock</p>
+                  </div>
+                  <div class="flex flex-row gap-x-1">
+                    <p class="font-semibold text-[16px]">Min Qty:</p>
+                    <p class="text-[16px] font-bold" id="min_quantity">2</p>
+                    <p class="font-semibold text-[16px]">Crtn</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
+          <!-- endofcard -->
+          <li>
+            <a href="#">
+              <div
+                class="card border border-black flex flex-col justify-center items-center text-center p-4"
+              >
+                <img
+                  class="w-[100%] h-[100%] hover:scale-y-125 transition-transform duration-200"
+                  src="image/item1.png"
+                  alt=""
+                />
+                <div class="py-2">
+                  <p class="font-bold text-[18px] w-fit" id="name">
+                    Digestive Half Roll
+                  </p>
+                  <div class="price_box flex flex-col gap-x-2 w-fit">
+                    <div class="flex flex-row gap-x-1 w-fit">
+                      <p class="font-semibold text-[16px]">WholeSale Rs.</p>
+                      <p
+                        class="wholesale_price font-semibold text-[16px]"
+                        id="wholesale_price_from"
+                      >
+                        205
+                      </p>
+                      <p>-</p>
+                      <p
+                        class="font-semibold text-[16px]"
+                        id="wholesale_price_that"
+                      >
+                        225
+                      </p>
+                    </div>
+
+                    <div class="flex flex-row gap-x-1">
+                      <p class="font-semibold text-[16px]">SalePrice Rs.</p>
+                      <p
+                        class="sale_price font-semibold text-[16px]"
+                        id="sale_price"
+                      >
+                        240
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex flex-row gap-x-1">
+                    <p class="font-medium">Availability:</p>
+                    <p class="stock font-bold">In Stock</p>
+                  </div>
+                  <div class="flex flex-row gap-x-1">
+                    <p class="font-semibold text-[16px]">Min Qty:</p>
+                    <p class="text-[16px] font-bold" id="min_quantity">2</p>
+                    <p class="font-semibold text-[16px]">Crtn</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
+          <!-- endofcard -->
+        </ul>
       </div>
     </main>
   </body>
