@@ -9,44 +9,214 @@
   <body>
     <header>
       <nav
-        class="flex flex-row justify-between items-center border border-black bg-[#F3F0FA]"
+        class="flex flex-row justify-between items-center px-5 py-3 bg-purple-50 border-b-2 border-purple-300 shadow-md"
       >
-        <div class="flex flex-row items-center w-fit">
-          <img class="w-[60px]" src="image/my_logo.png" alt="" />
-          <h3 class="logo font-extrabold text-[30px]">Online Shop</h3>
+        <!-- Logo + Shop Name -->
+        <div class="flex flex-row items-center gap-2">
+          <img
+            class="w-[55px] h-[55px]"
+            src="image/my_logo.png"
+            alt="Online Shop Logo"
+          />
+
+          <h3 class="text-[28px] font-bold text-purple-700">Online Shop</h3>
         </div>
-        <div class="links">
-          <ul class="flex flex-row text-[20px] gap-3">
-            <li
-              class="seprate-link border-2 border-red-300 rounded-lg p-2 hover:border-green-600 hover:bg-purple-200 hover:transition hover:duration-500 hover:-translate-y-0.5"
-            >
-              <a href="#">Home</a>
+
+        <!-- Navigation Links -->
+        <div>
+          <ul class="flex flex-row items-center gap-3 text-[18px]">
+            <li>
+              <a
+                href="#"
+                class="block px-4 py-2 rounded-lg text-purple-700 font-medium hover:bg-purple-600 hover:text-white transition duration-300"
+              >
+                Home
+              </a>
             </li>
-            <li
-              class="seprate-link border-2 border-red-300 rounded-lg p-2 hover:border-green-600 hover:bg-purple-100 hover:transition hover:duration-500 hover:-translate-y-0.5"
-            >
-              <a href="#">Login</a>
+
+            <li>
+              <a
+                href="#"
+                class="block px-4 py-2 rounded-lg text-purple-700 font-medium hover:bg-purple-600 hover:text-white transition duration-300"
+              >
+                Login
+              </a>
             </li>
-            <li
-              class="seprate-link border-2 border-red-300 rounded-lg p-2 hover:border-green-600 hover:bg-purple-200 hover:transition hover:duration-500 hover:-translate-y-0.5"
-            >
-              <a href="#">Signup</a>
+
+            <li>
+              <a
+                href="#"
+                class="block px-4 py-2 rounded-lg text-purple-700 font-medium hover:bg-purple-600 hover:text-white transition duration-300"
+              >
+                Signup
+              </a>
             </li>
           </ul>
         </div>
+
+        <!-- Cart -->
         <div
-          class="flex flex-row items-center border border-black rounded-lg p-1"
+          class="flex flex-row items-center gap-2 px-4 py-2 bg-white border-2 border-purple-300 rounded-xl shadow-sm hover:bg-purple-600 hover:text-white hover:border-purple-600 transition duration-300"
         >
-          <img src="image/cart.png" alt="" />
-          <h3 class="text-[20px]">Cart</h3>
+          <img
+            class="w-[30px] h-[30px]"
+            src="image/cart.png"
+            alt="Shopping Cart"
+          />
+
+          <h3 class="text-[18px] font-semibold">Cart</h3>
         </div>
       </nav>
     </header>
 
     <main>
-        <div>
-            
+      <div class="">
+        <div class="w-[40%] border border-black">
+          <!-- Product Image -->
+          <div class="flex flex-col justify-center border border-black">
+            <div class="flex flex-row border border-black justify-center gap-2">
+              <div
+                class="images flex flex-col gap-2 items-center border border-black"
+              >
+                <!-- uparrow -->
+                <div class="w-full">
+                  <button
+                    class="bg-gray-100 hover:bg-purple-500 p-3 shadow-md transition duration-300 w-full flex justify-center"
+                    id="slide_arrow_up"
+                  >
+                    <img
+                      class="w-[20px]"
+                      src="image/uparrow.png"
+                      alt="up Arrow"
+                    />
+                  </button>
+                </div>
+                <img
+                  class="w-[90px] h-[70px] border bg-gray-200 rounded-lg "
+                  src="image/item1.png"
+                  alt=""
+                  id="image_1"
+                />
+                <img
+                  class="w-[90px] h-[70px] border bg-gray-200 rounded-lg "
+                  src="image/item1.png"
+                  alt=""
+                  id="image_2"
+                />
+                <img
+                  class="w-[90px] h-[70px] border bg-gray-200 rounded-lg "
+                  src="image/item1.png"
+                  alt=""
+                  id="image_3"
+                />
+                <img
+                  class="w-[90px] h-[70px] border bg-gray-200 rounded-lg  "
+                  src="image/item1.png"
+                  alt=""
+                  id="image_4"
+                />
+                <img
+                  class="w-[90px] h-[70px] border bg-gray-300 "
+                  src="image/item_1_pic_5.png"
+                  alt=""
+                  id="image_5"
+                />
+                <img
+                  class="w-[90px] h-[70px] border bg-gray-200 "
+                  src="image/item1.png"
+                  alt=""
+                  id="image_6"
+                />
+                <!-- downarrow -->
+                <div class="w-full">
+                  <button
+                    class="bg-gray-100 hover:bg-purple-500 p-3 shadow-md transition duration-300 w-full flex justify-center"
+                    id="slide_arrow_down"
+                  >
+                    <img
+                      class="w-[20px]"
+                      src="image/downarrow.png"
+                      alt="Down Arrow"
+                    />
+                  </button>
+                </div>
+              </div>
+
+              <div>
+                <img
+                  id="item_image"
+                  src="image/item1.png"
+                  alt="Product image"
+                  class="w-fit h-[300px] bg-gray-200"
+                />
+              </div>
+            </div>
+
+            <!-- Photo / Video Buttons -->
+            <div class="flex justify-center gap-2 bg-purple-100 p-2">
+              <button
+                id="photo_btn"
+                class="border-2 border-purple-500 text-purple-600 px-4 py-2 rounded-lg hover:bg-purple-500 hover:text-white transition"
+              >
+                Photos
+              </button>
+
+              <button
+                id="video_btn"
+                class="border-2 border-purple-500 text-purple-600 px-4 py-2 rounded-lg hover:bg-purple-500 hover:text-white transition"
+              >
+                Video
+              </button>
+            </div>
+
+            <!-- Company Information -->
+            <div class="border border-gray-300 p-3">
+              <div class="flex items-center gap-3">
+                <!-- Company Logo -->
+                <a href="#">
+                  <img
+                    src="image/my_logo.png"
+                    alt="Company logo"
+                    class="w-12 h-12 object-contain"
+                  />
+                </a>
+
+                <!-- Company Details -->
+                <div>
+                  <!-- Company Name -->
+                  <a href="#" class="font-semibold text-gray-800">
+                    <p id="company_name">Mosqitoo and Ants Killers Ltd pvt</p>
+                  </a>
+
+                  <!-- Company Extra Information -->
+                  <div
+                    class="flex flex-wrap items-center gap-1 text-sm text-gray-600"
+                  >
+                    <img
+                      src="image/flag.png"
+                      alt="Country flag"
+                      class="w-4 h-4"
+                    />
+
+                    <span id="country">HK</span>
+                    <span>-</span>
+                    <span id="location_country">HK</span>
+                    <span>•</span>
+
+                    <span id="company_years">5</span>
+                    <span>yrs</span>
+
+                    <span>•</span>
+
+                    <span id="manufacture_type"> Custom Manufacture </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </main>
   </body>
+  <script src="app.js"></script>
 </html>
