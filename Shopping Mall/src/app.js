@@ -55,8 +55,12 @@ image_6.addEventListener("mouseenter", () => {
   image_slide.style.transform = "translateY(-170px)";
   image_slide.style.transition = "transform 500ms ease";
   pic_item.src = image_6.src;
-  
 });
 
 console.dir(pic_item);
 console.log(pic_item.src);
+
+setTimeout(() => {
+  console.log("Hello");
+}, 4000);
+console.log("Geo");
