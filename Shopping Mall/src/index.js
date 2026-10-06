@@ -15,3 +15,20 @@ cart_box.addEventListener("mouseleave", () => {
 });
 let searchbar_input = document.getElementById("searchbar_input");
 searchbar_input.addEventListener("click", () => {});
+
+let cards = [];
+let titles = [];
+let imagesrc = [];
+for (let i = 1; i <= 5; i++) {
+  cards[i] = document.getElementById(`card_${i}`);
+  titles[i] = document.getElementById(`title_${i}`);
+  imagesrc[i] = document.getElementById(`itemimage_${i}`);
+
+  cards[i].addEventListener("click", () => {
+    localStorage.setItem(`title`, titles[i].innerText);
+    localStorage.setItem(`imagesrc`, imagesrc[i].src);
+    localStorage.setItem(`iteration_value`, i);
+  });
+}
+
+
